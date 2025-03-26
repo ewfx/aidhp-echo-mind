@@ -8,7 +8,7 @@ from personalize import generate_personalized_reason
 st.set_page_config(page_title="Echo Mind", page_icon="🧠", layout="wide")
 
 
-weights_path = "checkpoints/model_weights.pt"
+weights_path = "model_weights.pt"
 metadata_path = "../data/amazon-electronics/filtered_item_metadata.csv"
 
 
