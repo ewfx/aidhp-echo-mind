@@ -1,4 +1,4 @@
-# 🚀 Echo Mind- Smart Recommendation System
+# 🚀 Echo Mind- Smart Financial Recommendation System
 
 ## 📌 Table of Contents
 
@@ -16,7 +16,7 @@
 
 ## 🎯 Introduction
 
-'Echo Mind- Smart Recommendation System' is an AI-powered solution that leverages Generative AI to analyze customer data, including profiles, social media activity, purchase history, sentiment analysis, and demographic details, to deliver tailored recommendations for products, services, or content.
+'Echo Mind- Smart Financial Recommendation System' is an AI-powered solution that leverages Generative AI to analyze customer data, including profiles, social media activity, purchase history, sentiment analysis, and demographic details, to deliver tailored recommendations for products, services, or content.
 
 ## 🎥 Demo
 
