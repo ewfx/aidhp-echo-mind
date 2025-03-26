@@ -38,46 +38,48 @@ By combining Generative AI, deep learning, and sentiment analysis, our solution 
 
 ## ⚙️ What It Does
 
-RecomAI is an AI-powered hyper-personalization engine that analyzes customer data to deliver real-time, personalized recommendations for products, services, or content. It helps businesses enhance customer engagement by leveraging Generative AI, sentiment analysis, and behavioral insights to understand and predict user preferences.
+For AI driven hyper-personalization and recommendations, we have created two models with different approaches.
 
-Key Features:
+1. Smart Recommendation System
+   We have leveraged the electronics section of Amazon Reviews 2023 dataset to create a LightGCN model. LightGCN is an embedding-based model, which means it attempts to find the optimal embeddings (vectors) for users and items. In addition, it also seeks the optimal scoring function, denoted as f. This function assigns scores to new user-item pairs, and items with higher scores are recommended.
 
-✅ Customer Profiling – Aggregates and analyzes customer data from multiple sources (purchase history, demographics, social media, etc.).
+   Once the user chooses items, we extract the embedding for those items from the model’s item embeddings, average out the embeddings of those items and compute cosine similarity of the averaged out embedding with the embeddings of all other items. and we recommend the top 5 items with the highest cosine similarity scores are recommended by the LightGCN model.
 
-✅ AI-Driven Recommendations – Uses Generative AI to deliver personalized product, service, or content suggestions.
-
-✅ Sentiment Analysis – Understands customer emotions through social media activity, reviews, and feedback.
-
-✅ Behavior Prediction – Predicts future customer interactions and preferences based on historical data.
-
-✅ Business Insights – Provides actionable reports to help businesses optimize engagement and marketing strategies.
-
-✅ Real-Time Adaptation – Continuously refines recommendations based on new data and user behavior.
-
-With Echo Mind- Smart Recommendation System, businesses can go beyond generic recommendations and offer hyper-personalized experiences, driving customer satisfaction, loyalty, and increased revenue.
+2. GenAI Financial Recommendation Engine
+   This project builds a Retrieval-Augmented Generation (RAG) based QA system that recommends company products based on open-source company product data, demographic (DEMOG) data, and bureau (BUREAU) data. It leverages LangChain, Hugging Face embeddings, and the Zephyr 7B LLM for intelligent recommendations.
 
 ## 🛠️ How We Built It
 
-The development of Echo Mind- Smart Recommendation System involved multiple stages, from data collection and preprocessing to model training and deployment. Our approach combined data-driven insights, AI-powered recommendations, and real-time user interaction to create a seamless hyper-personalization engine.
+For AI driven hyper-personalization and recommendations, we have created two models with different approaches.
 
-🏗 Development Process:
+1. Smart Recommendation System
+   We have leveraged the electronics section of Amazon Reviews 2023 dataset to create a LightGCN model. LightGCN is an embedding-based model, which means it attempts to find the optimal embeddings (vectors) for users and items. In addition, it also seeks the optimal scoring function, denoted as f. This function assigns scores to new user-item pairs, and items with higher scores are recommended.
 
-1️⃣ Data Collection & Preprocessing
+   Once the user chooses items, we extract the embedding for those items from the model’s item embeddings, average out the embeddings of those items and compute cosine similarity of the averaged out embedding with the embeddings of all other items. and we recommend the top 5 items with the highest cosine similarity scores are recommended by the LightGCN model.
 
-Collected structured and unstructured data from customer profiles, purchase history, and sentiment analysis sources.
+2. GenAI Financial Recommendation Engine
+   This project builds a Retrieval-Augmented Generation (RAG) based QA system that recommends company products based on open-source company product data, demographic (DEMOG) data, and bureau (BUREAU) data. It leverages LangChain, Hugging Face embeddings, and the Zephyr 7B LLM for intelligent recommendations.
 
-Used Pandas and NumPy for data cleaning, transformation, and feature engineering.
+Components:
 
-2️⃣ AI Model Development
+1. Data Ingestion & Preprocessing:
+   o Load open-source company product, DEMOG, and BUREAU data.
+   o Preprocess the data (cleaning, normalization, feature engineering).
+   o Save the processed data into a CSV file.
+2. Embedding & Vector Database:
+   o Load the preprocessed CSV.
+   o Convert text-based data into embeddings using a Hugging Face Embedding Model.
+   o Store embeddings in a Vector Database (e.g., FAISS, ChromaDB, Pinecone).
+3. Retrieval-Augmented Generation (RAG) Pipeline:
+   o Utilize LangChain to retrieve relevant data from the vector DB.
+   o Process queries using the Zephyr 7B LLM to generate contextual responses.
+4. Evaluation of Recommended Products:
+   o Check if the recommended products align with customer needs.
+   o Validate outputs against business logic and predefined evaluation metrics.
 
-Integrated a Large Language Model (LLM) to generate personalized recommendations.
-
-Implemented sentiment analysis to refine recommendations based on user emotions.
-
-GenAI Financial Recommendation Engine
+GenAI Financial Recommendation System
 
 Project Methodology
-
 This Project using the Open Source Data of Company Products information with their DEMOG and BUREAU data.
 Using Python, that load data and then pre-processed and saved in CSV File.
 Loading that same CSV file to insert into Vector DB using Embedding Model from Hugging Face.
@@ -115,7 +117,9 @@ During the development of RecomAI, we encountered several challenges that pushed
 
 🔹 Selecting the right dataset was crucial for training RecomAI to generate accurate and meaningful hyper-personalized recommendations. We needed datasets that contained diverse customer interactions, purchase behavior, sentiment data, and demographic details to build a robust AI model.
 
-## 🏃 How to Run
+## Run below step 1 and step 2
+
+## 🏃 Step 1 : How to Run Smart Recommendation System
 
 1. Clone the repository
    ```sh
@@ -126,7 +130,6 @@ During the development of RecomAI, we encountered several challenges that pushed
    ```sh
    pip install streamlit
    pip install pandas
-
    pip install -r requirements.txt (for Python)
    ```
 
@@ -138,13 +141,40 @@ During the development of RecomAI, we encountered several challenges that pushed
    python app.py
    ```
 
+## 🏃 Step 2: How to Run GenAI Financial Recommendation Engine
+
+4. Clone the repository
+   ```sh
+   git clone https://github.com/ewfx/aidhp-echo-mind.git
+   ```
+5. Install dependencies
+
+   ```sh
+   https://colab.research.google.com/drive/14lb9bE0mNpQAzBJ2kBfzaLoBkUvmhNAI?usp=sharing
+
+   Open the Colab Notebook.
+   Run each cell to install dependencies
+   ```
+
+6. Run the project
+
+   ```sh
+   https://colab.research.google.com/drive/14lb9bE0mNpQAzBJ2kBfzaLoBkUvmhNAI?usp=sharing
+
+   Open the Colab Notebook.
+   Run each cell.
+
+   ```
+
 ## 🏗️ Tech Stack
 
 🚀 Programming Language: Python
 
-📊 Data Processing: Pandas, NumPy
+📊 Data Processing: Pandas, NumPy, Scikit-learn
+Vector DB, ChromaDB
 
-🧠 AI & Machine Learning: LLM
+🧠 AI & Machine Learning: Embedding Model Hugging Face, RAG Framework LangChain,
+LLM Model Zephyr 7B
 
 📈 Data Visualization & UI: Streamlit
 
