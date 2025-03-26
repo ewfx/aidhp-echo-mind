@@ -20,7 +20,8 @@
 
 ## 🎥 Demo
 
-🔗 [Live Demo](#) (if applicable)  
+🔗 [Live Demo](#)
+https://www.loom.com/share/1145a694dd8e4cc9bc7fa3a0509b0073?sid=593dc6ee-a862-4f79-8613-0ab4cd41e29d
 📹 [Video Demo](#) (if applicable)  
 🖼️ Screenshots:
 
@@ -88,7 +89,7 @@ Checking Recommended product response from LLM.
 
 Due to CPU limitations for running a Large Language Model locally, we have leveraged Google Colab GPU for running our LLM Model. On providing customer information from the synthetic dataset we created earlier, the LLM will analyze and generate banking product recommendations.
 
-https://colab.research.google.com/drive/14lb9bE0mNpQAzBJ2kBfzaLoBkUvmhNAI?usp=sharing
+https://colab.research.google.com/drive/1ZiHMN2Ss0XRRBow5phQhqYNZaAg1G9DY?usp=sharing
 
 Open the Colab Notebook.
 Run each cell.
@@ -150,7 +151,7 @@ During the development of RecomAI, we encountered several challenges that pushed
 5. Install dependencies
 
    ```sh
-   https://colab.research.google.com/drive/14lb9bE0mNpQAzBJ2kBfzaLoBkUvmhNAI?usp=sharing
+   https://colab.research.google.com/drive/1ZiHMN2Ss0XRRBow5phQhqYNZaAg1G9DY?usp=sharing
 
    Open the Colab Notebook.
    Run each cell to install dependencies
@@ -159,7 +160,7 @@ During the development of RecomAI, we encountered several challenges that pushed
 6. Run the project
 
    ```sh
-   https://colab.research.google.com/drive/14lb9bE0mNpQAzBJ2kBfzaLoBkUvmhNAI?usp=sharing
+   https://colab.research.google.com/drive/1ZiHMN2Ss0XRRBow5phQhqYNZaAg1G9DY?usp=sharing
 
    Open the Colab Notebook.
    Run each cell.
