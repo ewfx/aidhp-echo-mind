@@ -134,15 +134,20 @@ During the development of RecomAI, we encountered several challenges that pushed
    ```sh
    pip install streamlit
    pip install pandas
-   pip install -r requirements.txt (for Python shared in path aidhp-echo-mind/code)
+   and fllow below instructions shared
    ```
 
 3. Run the project
 
    ```sh
-   streamlit run app.py
-
-   python app.py
+    Run git clone git@github.com:ewfx/aidhp-echo-mind.git
+    Create a virtual environment with Python = 3.9 (conda create --name echomind python=3.9)
+    cd aidhp-echo-mind/code
+    pip install -r requirements.txt
+    Activate environment (conda activate echomind)
+    cd src/deep-learning/code
+    Insert OpenRouter API key in personalize.py
+    Run streamlit run app.py
    ```
 
 ## 🏃 Step 2: How to Run GenAI Financial Recommendation Engine
