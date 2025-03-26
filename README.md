@@ -20,9 +20,12 @@
 
 ## 🎥 Demo
 
-🔗 [Live Demo](#)
+📹 [Video Demo](#) for Smart Recommendation System
+Attached demo video file in root path "aidhp-echo-mind"
+
+🔗 [Live Demo](#) for GenAI Financial Recommendation Engine
 https://www.loom.com/share/1145a694dd8e4cc9bc7fa3a0509b0073?sid=593dc6ee-a862-4f79-8613-0ab4cd41e29d
-📹 [Video Demo](#) (if applicable)  
+
 🖼️ Screenshots:
 
 ![Screenshot 1](link-to-image)
@@ -131,7 +134,7 @@ During the development of RecomAI, we encountered several challenges that pushed
    ```sh
    pip install streamlit
    pip install pandas
-   pip install -r requirements.txt (for Python)
+   pip install -r requirements.txt (for Python shared in path aidhp-echo-mind/code)
    ```
 
 3. Run the project
